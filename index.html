@@ -1,77 +1,65 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Макар — визитка</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #f9f9f9;
-      color: #222;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      text-align: center;
-    }
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-    p {
-      margin-bottom: 2rem;
-      font-size: 1rem;
-      color: #555;
-    }
-    .links {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .link {
-      display: inline-block;
-      padding: 0.75rem 1.5rem;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 500;
-      transition: all 0.2s ease-in-out;
-    }
-    .telegram {
-      background-color: #229ED9;
-      color: white;
-    }
-    .telegram:hover {
-      background-color: #1b88b8;
-    }
-    .secondary {
-      background-color: #e0e0e0;
-      color: #333;
-    }
-    .secondary:hover {
-      background-color: #cfcfcf;
-    }
-    footer {
-      position: absolute;
-      bottom: 1rem;
-      font-size: 0.8rem;
-      color: #aaa;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Персональный сайт Макара — контакты, соцсети, навигация." />
+  <meta name="keywords" content="Макар, mokar23, макар ярков, Ярик Король, мокар23, мокар 23, мокар" />
+  <meta name="author" content="Макар" />
+  <title>mokar23</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
 </head>
 <body>
-  <h1>Макар</h1>
-  <p>На связи — пиши в Telegram</p>
-  <div class="links">
-    <a class="link telegram" href="https://t.me/mokar23" target="_blank">Написать в Telegram</a>
-    <a class="link secondary" href="https://vk.com/mokar23" target="_blank">VK</a>
-    <a class="link secondary" href="https://www.instagram.com/mokar23?igsh=NGFzdTBzZ2ZudWc3&utm_source=qr" target="_blank">Instagram</a>
+  <div class="site-wrapper">
+    <header class="hero">
+      <img src="avatar.jpg" alt="Фото Макара" class="avatar" />
+      <h1 class="username">@mokar23</h1>
+      <p class="tagline">IR student / медиа / ещё кто-то</p>
+    </header>
+
+    <nav class="nav-bar">
+      <ul>
+        <li><a href="#links">Ссылки</a></li>
+        <li><a href="#about">Обо мне</a></li>
+        <li><a href="#future">Скоро</a></li>
+      </ul>
+    </nav>
+
+    <section id="links" class="links-section">
+      <h2>Мои ссылки</h2>
+      <ul class="link-list">
+        <li>
+          <a href="https://t.me/your_username" class="link primary" target="_blank">
+            Telegram <span class="note">— основное средство связи</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/your_username" class="link" target="_blank">
+            Instagram <span class="note">— только смотрю, сейчас ничего не выкладываю</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://vk.com/your_username" class="link" target="_blank">
+            VK <span class="note">— просто есть</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.snapchat.com/add/your_username" class="link" target="_blank">
+            Snapchat <span class="note">— добавляйте, если готовы делать огоньки</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section id="future" class="future-section">
+      <h2>Скоро на сайте</h2>
+      <p>Позже здесь появится больше разделов, когда у меня будет вдохновение, пока что это сайт-визитка.</p>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Макар Ярков. Все права защищены.</p>
+    </footer>
   </div>
-  <footer>© Mokar23, 2025</footer>
 </body>
 </html>
