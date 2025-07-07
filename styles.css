@@ -1,0 +1,153 @@
+/* Персональный стиль для сайта Макара с анимациями */
+
+:root {
+  --primary-color: #0077ff;
+  --bg-color: #0f1117;
+  --text-color: #f0f0f0;
+  --note-color: #a0a0a0;
+  --accent-bg: #1c1f26;
+  --hover-color: #3399ff;
+  --border-radius: 12px;
+  --transition: 0.3s ease;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.site-wrapper {
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero {
+  text-align: center;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--primary-color);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.username {
+  font-size: 2rem;
+  margin: 1rem 0 0.25rem;
+}
+
+.tagline {
+  font-size: 1rem;
+  color: var(--note-color);
+}
+
+.nav-bar ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.nav-bar a {
+  color: var(--note-color);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+}
+
+.nav-bar a:hover {
+  color: var(--text-color);
+  background-color: var(--accent-bg);
+}
+
+.links-section,
+.future-section {
+  width: 100%;
+  background: var(--accent-bg);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  animation: fadeIn 1s ease-in;
+}
+
+.link-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.link {
+  display: block;
+  text-decoration: none;
+  color: var(--text-color);
+  background-color: #1a1c22;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  transition: background-color var(--transition), transform var(--transition);
+}
+
+.link:hover {
+  background-color: var(--hover-color);
+  transform: scale(1.02);
+}
+
+.link.primary {
+  background-color: var(--primary-color);
+  font-weight: bold;
+  color: white;
+}
+
+.note {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--note-color);
+  margin-top: 0.25rem;
+}
+
+footer {
+  font-size: 0.8rem;
+  color: var(--note-color);
+  margin-top: 2rem;
+  text-align: center;
+  opacity: 0.6;
+}
+
+@media (max-width: 500px) {
+  .nav-bar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .avatar {
+    width: 96px;
+    height: 96px;
+  }
+  .username {
+    font-size: 1.6rem;
+  }
+}
